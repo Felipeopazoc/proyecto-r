@@ -7,7 +7,8 @@ data <- data.frame(
 )
 data
 # Barplot
-ggplot(data, aes(x=Años, y=Promedios)) + 
-  ggtitle("Promedio suicidios de mujeres cada \n100.000 habitantes en cada país del mundo")+
-  geom_bar(color="blue",fill=rgb(0.1,0.4,0.5,0.7),stat="identity")
-
+ggplot(data, aes(x=Años, y=Promedios,group=1)) + 
+  #ggtitle("Promedio suicidios de mujeres cada \n100.000 habitantes en cada país del mundo")+
+  #geom_bar(color="blue",fill=rgb(0.1,0.4,0.5,0.7),stat="identity")
+                    geom_line()+
+                    geom_point()
