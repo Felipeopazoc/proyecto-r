@@ -27,9 +27,11 @@ paises <- c(data_final$Paises,data_final2$Paises, data_final3$Paises, data_final
 suicidios <- c(data_final$X2000, data_final2$X2010[1], data_final3$X2015, data_final4$X2016)
 Año <- c("2000","2010","2015", "2016")
 
-Tabla <- data.frame(paises,suicidios,Año)
-
-Tabla 
+Tabla <- data.frame(Paises = paises,Suicidios = suicidios,Año)
+dt <- Tabla
+dt %>%
+  kbl() %>%
+  kable_styling()
 
 
 

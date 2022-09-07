@@ -32,6 +32,9 @@ cantidad_suicidios <- c(data_final$X2000, data_final2$X2010[1], data_final3$X201
 Año <- c("2000","2010","2015", "2016")
 Tabla <- data.frame(Paises = paises, Cantidad_suicidios = cantidad_suicidios, Año)
 
-Tabla
+dt <- Tabla
+dt %>%
+  kbl() %>%
+  kable_styling()
 
 
