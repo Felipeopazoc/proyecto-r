@@ -1,5 +1,6 @@
-library(readxl)
-
+library(tidyverse)
+library(DT)
+library(kableExtra)
 ruta_excel <- "C:\\Users\\felip\\Downloads\\tasa_suicidios_hombres.csv"
 data <- read.csv(ruta_excel)
 
